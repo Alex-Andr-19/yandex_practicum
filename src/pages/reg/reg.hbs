@@ -1,0 +1,66 @@
+---
+form: [
+    {
+        name: "email",
+        title: "Почта",
+        type: "email",
+    },
+    {
+        name: "login",
+        title: "Логин",
+        type: "text",
+    },
+    {
+        name: "first_name",
+        title: "Имя",
+        type: "text",
+    },
+    {
+        name: "second_name",
+        title: "Фамилия",
+        type: "text",
+    },
+    {
+        name: "phone",
+        title: "Телефон",
+        type: "tel",
+    },
+    {
+        name: "password",
+        title: "Пароль",
+        type: "password",
+    },
+    {
+        name: "password_second",
+        title: "Пароль (ещё раз)",
+        type: "password",
+    },
+]
+---
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="../auth/auth.scss">
+    <link rel="stylesheet" href="reg.scss">
+</head>
+
+<body>
+    <form class="form">
+        <h1 class="form__title">Регистрация</h1>
+
+        {{#each form}}
+        <div class="form__inputBlock">
+            <label class="form__inputBlock__label" for="{{ this.name }}">{{ this.title }}</label>
+            <input class="form__inputBlock__input" type="{{ this.type }}" id="{{ this.name }}" name="{{ this.name }}">
+        </div>
+        {{/each}}
+
+        <div class="form__btnBlock">
+            <a href="/src/index.hbs" class="form__btnBlock__main">Зарегистрироваться</a>
+            <a href="/src/index.hbs" class="form__btnBlock__second">Войти</a>
+        </div>
+    </form>
+</body>
+
+</html>

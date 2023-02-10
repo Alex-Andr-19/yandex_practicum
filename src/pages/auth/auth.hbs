@@ -1,0 +1,41 @@
+---
+form: [
+    {
+        name: "login",
+        title: "Логин",
+        type: "text",
+    },
+    {
+        name: "password",
+        title: "Пароль",
+        type: "password",
+    },
+]
+---
+
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="auth.scss">
+</head>
+
+<body>
+    <form class="form">
+        <h1 class="form__title">Вход</h1>
+
+        {{#each form}}
+        <div class="form__inputBlock">
+            <label class="form__inputBlock__label" for="{{ this.name }}">{{ this.title }}</label>
+            <input class="form__inputBlock__input" type="{{ this.type }}" id="{{ this.name }}" name="{{ this.name }}">
+        </div>
+        {{/each}}
+
+        <div class="form__btnBlock">
+            <a href="/src/index.hbs" class="form__btnBlock__main">Войти</a>
+            <a href="/src/pages/reg/reg.hbs" class="form__btnBlock__second">Ещё не зарегистрированы?</a>
+        </div>
+    </form>
+</body>
+
+</html>
