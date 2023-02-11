@@ -50,10 +50,7 @@ form: [
         <h1 class="form__title">Регистрация</h1>
 
         {{#each form}}
-        <div class="form__inputBlock">
-            <label class="form__inputBlock__label" for="{{ this.name }}">{{ this.title }}</label>
-            <input class="form__inputBlock__input" type="{{ this.type }}" id="{{ this.name }}" name="{{ this.name }}">
-        </div>
+            {{> inputBlock data=this }}
         {{/each}}
 
         <div class="form__btnBlock">
