@@ -1,14 +1,76 @@
 ---
-name: "asdf"
+dialogs: [
+    {
+        name: "Андрей",
+        lastMsg: "Изображение",
+        time: "10:49",
+        countUnchecked: "2",
+    },
+    {
+        name: "Киноклуб",
+        lastMsgAuthor: "Вы: ",
+        lastMsg: "стикер",
+        time: "12:00",
+    },
+    {
+        name: "Илья",
+        lastMsg: "Друзья, у меня для вас особенный выпуск новостей!...",
+        time: "15:22",
+        countUnchecked: "4",
+    },
+    {
+        name: "Вадим",
+        lastMsgAuthor: "Вы: ",
+        lastMsg: "Круто!",
+        time: "Пт",
+    },
+    {
+        name: "тет-а-теты",
+        lastMsg: "И Human Interface Guidelines и Material Design рекомендуют...",
+        time: "Ср",
+    },
+    {
+        name: "1, 2, 3",
+        lastMsg: "Миллионы россиян ежедневно проводят десятки часов свое...",
+        time: "Пн",
+    },
+    {
+        name: "Design Destroyer",
+        lastMsg: "В 2008 году художник Jon Rafman  начал собирать...",
+        time: "Пн",
+    },
+    {
+        name: "Day.",
+        lastMsg: "Так увлёкся работой по курсу, что совсем забыл его анонсир...",
+        time: "1 Мая 2020",
+    },
+]
 ---
 
 <html>
 
-<head></head>
+<head>
+    <link rel="stylesheet" href="./index.scss">
+</head>
 
 <body>
-    <h1>{{ name }}</h1>
-    <a href="/src/pages/auth/auth.hbs">asdfzxcv</a>
+    <div class="dialogListBar">
+        <div class="dialogListBar__header">
+            <a href="/src/index.hbs" class="dialogListBar__header__profile">Профиль</a>
+            <input type="text" class="dialogListBar__header__search" placeholder="Поиск">
+        </div>
+
+        <div class="dialogListBar__list">
+            <div class="dialogListBar__list__bar"></div>
+            {{#each dialogs}}
+                {{> dialogItem data=this}}
+            {{/each}}
+        </div>
+    </div>
+
+    <div class="dialog">
+        <h3>Выберете чат, чтобы отправить сообщение</h3>
+    </div>
 </body>
 
 </html>

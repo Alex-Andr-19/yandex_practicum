@@ -1,0 +1,21 @@
+<div class="dialogListBar__list__item">
+    <div class="dialogListBar__list__item__avatar"></div>
+    <div class="dialogListBar__list__item__content">
+        <div class="dialogListBar__list__item__content__name">{{ data.name }}</div>
+        <div class="dialogListBar__list__item__content__lastMsg">
+            {{#if data.lastMsgAuthor}}
+            <span class="dialogListBar__list__item__content__lastMsg__author">{{ data.lastMsgAuthor }}</span>
+            {{/if}}
+            {{ data.lastMsg }}
+        </div>
+    </div>
+    <div class="dialogListBar__list__item__info">
+        <div class="dialogListBar__list__item__info__time">{{ data.time }}</div>
+        {{#if data.countUnchecked}}
+        <div class="dialogListBar__list__item__info__countUnchecked">
+            {{ data.countUnchecked }}
+        </div>
+        {{/if}}
+    </div>
+</div>
+<div class="dialogListBar__list__bar"></div>
