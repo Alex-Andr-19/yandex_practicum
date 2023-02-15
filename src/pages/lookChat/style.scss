@@ -1,0 +1,194 @@
+.dialog {
+    padding: 0 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    &__header {
+        width: 100%;
+        height: 7.5%;
+
+        padding: 8px 0;
+
+        border-bottom: 2px solid #efefef;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__info {
+            width: 237px;
+
+            display: flex;
+            align-items: center;
+
+            &__avatar {
+                width: 35px;
+                height: 35px;
+
+                border-radius: 50%;
+                background-color: #efefef;
+            }
+
+            &__nickname {
+                margin-left: 10px;
+
+                font-weight: bold;
+                color: black;
+            }
+        }
+
+        &__tools {
+            height: 100%;
+
+            text-decoration: none;
+
+            display: flex;
+            align-items: center;
+
+            svg {
+                height: 60%;
+
+                color: #1e1e1e;
+            }
+        }
+    }
+
+    &__content {
+        width: 100%;
+        height: 85%;
+
+        padding-top: 48px;
+
+        &__date {
+            width: 100%;
+
+            margin-bottom: 30px;
+
+            text-align: center;
+        }
+
+        &__msg {
+            display: flex;
+
+            &.get {
+                justify-content: flex-start;
+            }
+            &.send {
+                justify-content: flex-end;
+            }
+
+            &__content {
+                position: relative;
+
+                max-width: 45%;
+                // width: auto;
+
+                padding: 10px;
+                margin-bottom: 10px;
+
+                background-color: #f8f8f8;
+                border-radius: 15px;
+
+                color: #1e1e1e;
+
+                display: inline-block;
+
+                &__time {
+                    position: absolute;
+                    bottom: 10px;
+                    right: 10px;
+
+                    font-size: 13px;
+                    color: #999999;
+                }
+
+                &__readState {
+                    position: absolute;
+                    bottom: 14px;
+                    right: 45px;
+                }
+
+                &.firstFrom {
+                    border-top-left-radius: 0;
+                }
+
+                &.imgBlock {
+                    width: 40%;
+                    height: 380px;
+
+                    background-image: url("./img.svg");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-color: unset;
+
+                    .dialog__content__msg__content__time {
+                        padding: 2px 10px;
+
+                        background-color: #52525280;
+                        border-radius: 30px;
+
+                        color: white;
+                    }
+                }
+
+                &.lastTo {
+                    padding-right: 65px;
+
+                    background-color: #E4EDFD;
+                    border-bottom-right-radius: 0;
+                    
+                    .dialog__content__msg__content__time {
+                        color: #3369F3;
+                    }
+                }
+            }
+        }
+    }
+
+    &__sendMsg {
+        width: 100%;
+        height: 7.5%;
+
+        padding: 10px 0;
+
+        border-top: 2px solid #efefef;
+
+        display: grid;
+        grid-template-columns: 3% 94% 3%;
+
+        &__media {
+            height: 100%;
+
+            display: flex;
+            align-items: center;
+        }
+
+        &__input {
+            width: 100%;
+
+            padding: 10px 20px;
+
+            background-color: #EFEFEF;
+            border: none;
+            border-radius: 30px;
+
+            outline: none;
+
+            &::placeholder {
+                color: #999999;
+            }
+        }
+
+        &__sendBtn {
+            background: none;
+            border: none;
+
+            display: flex;
+            justify-content: flex-end;            
+            align-items: center;
+        }
+    }
+}

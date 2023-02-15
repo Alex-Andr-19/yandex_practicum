@@ -1,0 +1,175 @@
+---
+dialogs: [
+{
+name: "Андрей",
+lastMsg: "Изображение",
+time: "10:49",
+countUnchecked: "2",
+},
+{
+name: "Киноклуб",
+lastMsgAuthor: "Вы: ",
+lastMsg: "стикер",
+time: "12:00",
+},
+{
+name: "Илья",
+lastMsg: "Друзья, у меня для вас особенный выпуск новостей!...",
+time: "15:22",
+countUnchecked: "4",
+},
+{
+name: "Вадим",
+lastMsgAuthor: "Вы: ",
+lastMsg: "Круто!",
+time: "Пт",
+},
+{
+name: "тет-а-теты",
+lastMsg: "И Human Interface Guidelines и Material Design рекомендуют...",
+time: "Ср",
+},
+{
+name: "1, 2, 3",
+lastMsg: "Миллионы россиян ежедневно проводят десятки часов свое...",
+time: "Пн",
+},
+{
+name: "Design Destroyer",
+lastMsg: "В 2008 году художник Jon Rafman  начал собирать...",
+time: "Пн",
+},
+{
+name: "Day.",
+lastMsg: "Так увлёкся работой по курсу, что совсем забыл его анонсир...",
+time: "1 Мая 2020",
+},
+]
+---
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="../../index.scss">
+    <link rel="stylesheet" href="./style.scss">
+</head>
+
+<body>
+    <div class="dialogListBar">
+        <div class="dialogListBar__header">
+            <a href="/src/index.hbs" class="dialogListBar__header__profile">Профиль</a>
+            <input type="text" class="dialogListBar__header__search" placeholder="Поиск">
+        </div>
+
+        <div class="dialogListBar__list">
+            <div class="dialogListBar__list__bar"></div>
+            {{#each dialogs}}
+            {{> dialogItem data=this}}
+            {{/each}}
+        </div>
+    </div>
+
+    <div class="dialog">
+        <div class="dialog__header">
+            <div class="dialog__header__info">
+                <div class="dialog__header__info__avatar"></div>
+                <div class="dialog__header__info__nickname">Вадим</div>
+            </div>
+
+            <a href="/src/index.hbs" class="dialog__header__tools">
+                <svg width="46" height="46" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 7.2a2.4 2.4 0 1 1 0-4.8 2.4 2.4 0 0 1 0 4.8Zm0 7.2a2.4 2.4 0 1 1 0-4.8 2.4 2.4 0 0 1 0 4.8Zm0 7.2a2.4 2.4 0 1 1 0-4.8 2.4 2.4 0 0 1 0 4.8Z">
+                    </path>
+                </svg>
+            </a>
+        </div>
+
+        <div class="dialog__content">
+            <div class="dialog__content__date">19 июня</div>
+
+            <div class="dialog__content__msg get">
+                <div class="dialog__content__msg__content firstFrom">
+                    <p>Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент
+                        попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что
+                        астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на
+                        поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.</p>
+                    <br />
+                    <p>Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так
+                        никогда и
+                        не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000
+                        евро.
+                    </p>
+                    <div class="dialog__content__msg__content__time">11:56</div>
+                </div>
+            </div>
+
+            <div class="dialog__content__msg get">
+                <div class="dialog__content__msg__content imgBlock">
+                    <div class="dialog__content__msg__content__time">11:56</div>
+                </div>
+            </div>
+
+            <div class="dialog__content__msg send">
+                <div class="dialog__content__msg__content lastTo">
+                    <p>Круто!</p>
+                    <div class="dialog__content__msg__content__readState">
+                        <svg width="11" height="5" viewBox="0 0 11 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line y1="-0.5" x2="3.765" y2="-0.5"
+                                transform="matrix(0.705933 0.708278 -0.705933 0.708278 0.700195 2.33313)"
+                                stroke="#3369F3" />
+                            <line y1="-0.5" x2="5.6475" y2="-0.5"
+                                transform="matrix(0.705933 -0.708278 0.705933 0.708278 3.35828 5.00006)"
+                                stroke="#3369F3" />
+                            <line y1="-0.5" x2="5.6475" y2="-0.5"
+                                transform="matrix(0.705933 -0.708278 0.705933 0.708278 6.01587 5.00006)"
+                                stroke="#3369F3" />
+                        </svg>
+                    </div>
+                    <div class="dialog__content__msg__content__time">12:00</div>
+                </div>
+            </div>
+        </div>
+
+        <form class="dialog__sendMsg">
+            <div class="dialog__sendMsg__media">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M7.18662 13.5L14.7628 5.92389L15.7056 6.8667L8.12943 14.4428L7.18662 13.5Z" fill="#999999" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M9.70067 16.0141L17.2768 8.43793L18.2196 9.38074L10.6435 16.9569L9.70067 16.0141Z"
+                        fill="#999999" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M15.0433 21.3567L22.6195 13.7806L23.5623 14.7234L15.9861 22.2995L15.0433 21.3567Z"
+                        fill="#999999" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M17.5574 23.8708L25.1335 16.2946L26.0763 17.2374L18.5002 24.8136L17.5574 23.8708Z"
+                        fill="#999999" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M17.5574 23.8709C14.9423 26.486 10.7118 26.4954 8.10831 23.8919C5.50482 21.2884 5.51424 17.0579 8.12936 14.4428L7.18655 13.5C4.0484 16.6381 4.0371 21.7148 7.16129 24.839C10.2855 27.9632 15.3621 27.9518 18.5003 24.8137L17.5574 23.8709Z"
+                        fill="#999999" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M22.6195 13.7806L23.5623 14.7234C26.003 12.2826 26.0118 8.3341 23.5819 5.90417C21.152 3.47424 17.2035 3.48303 14.7627 5.92381L15.7055 6.86662C17.6233 4.94887 20.7257 4.94196 22.6349 6.85119C24.5441 8.76042 24.5372 11.8628 22.6195 13.7806Z"
+                        fill="#999999" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M9.70092 16.0144C7.95751 17.7578 7.95123 20.5782 9.68689 22.3138C11.4226 24.0495 14.2429 24.0432 15.9863 22.2998L15.0435 21.357C13.8231 22.5774 11.8489 22.5818 10.6339 21.3668C9.41894 20.1518 9.42334 18.1776 10.6437 16.9572L9.70092 16.0144Z"
+                        fill="#999999" />
+                </svg>
+
+            </div>
+
+            <input type="text" class="dialog__sendMsg__input" placeholder="Сообщение" name="message">
+
+            <button class="dialog__sendMsg__sendBtn">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="14" cy="14" r="14" fill="#3369F3" />
+                    <rect x="8" y="13.2" width="11" height="1.6" fill="white" />
+                    <path d="M15 9L19 14L15 19" stroke="white" stroke-width="1.6" />
+                </svg>
+            </button>
+
+        </form>
+    </div>
+</body>
+
+</html>
