@@ -51,6 +51,7 @@ time: "1 Мая 2020",
 
 <head>
     <link rel="stylesheet" href="../../index.scss">
+    <link rel="stylesheet" href="../lookChat/style.scss">
     <link rel="stylesheet" href="./style.scss">
 </head>
 
@@ -76,13 +77,34 @@ time: "1 Мая 2020",
                 <div class="dialog__header__info__nickname">Вадим</div>
             </div>
 
-            <a href="/src/pages/lookChatTools/lookChatTools.hbs" class="dialog__header__tools">
+            <a href="/src/pages/lookChat/lookChat.hbs" class="dialog__header__tools">
                 <svg width="46" height="46" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M12 7.2a2.4 2.4 0 1 1 0-4.8 2.4 2.4 0 0 1 0 4.8Zm0 7.2a2.4 2.4 0 1 1 0-4.8 2.4 2.4 0 0 1 0 4.8Zm0 7.2a2.4 2.4 0 1 1 0-4.8 2.4 2.4 0 0 1 0 4.8Z">
                     </path>
                 </svg>
             </a>
+
+            <div class="dialog__header__toolsBlock">
+                <a href="/src/index.hbs" class="dialog__header__toolsBlock__btn">
+                    <div class="dialog__header__toolsBlock__btn__img">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="5.99988" y1="0.5" x2="5.99988" y2="11.5" stroke="#3369F3" stroke-width="1.5" />
+                            <line x1="0.499878" y1="6" x2="11.4999" y2="6" stroke="#3369F3" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <div class="dialog__header__toolsBlock__btn__text">Добавить пользователя</div>
+                </a>
+                <a href="/src/index.hbs" class="dialog__header__toolsBlock__btn">
+                    <div class="dialog__header__toolsBlock__btn__img cross">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="5.99988" y1="0.5" x2="5.99988" y2="11.5" stroke="#3369F3" stroke-width="1.5" />
+                            <line x1="0.499878" y1="6" x2="11.4999" y2="6" stroke="#3369F3" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <div class="dialog__header__toolsBlock__btn__text">Удалить пользователя</div>
+                </a>
+            </div>
         </div>
 
         <div class="dialog__content">

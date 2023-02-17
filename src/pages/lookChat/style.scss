@@ -40,11 +40,13 @@
         }
 
         &__tools {
+            width: 55px;
             height: 100%;
 
             text-decoration: none;
 
             display: flex;
+            justify-content: center;
             align-items: center;
 
             svg {
